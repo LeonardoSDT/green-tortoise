@@ -1,0 +1,28 @@
+.image-gallery {
+  height: 100%;
+  overflow: hidden;
+  .image-gallery-content {
+    height: 100%;
+    .image-gallery-slide-wrapper {
+      height: 100%;
+      .image-gallery-swipe {
+        height: 100%;
+        .image-gallery-slides {
+          height: 100%;
+          a {
+            display: block;
+            height: 400px;
+            position: relative;
+            img {
+              width: 100%;
+              max-height: none !important;
+              object-fit: contain;
+              /* position: absolute;
+              top: 50%;*/
+            }
+          }
+        }
+      }
+    }
+  }
+}
