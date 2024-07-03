@@ -31,13 +31,14 @@ export const Footer = () => {
           />
         </Box>
         <Box>
-          {info.map((item) => (
+          {info.map((item, i) => (
             <Box
               className={`leading-7 ${
                 item.bold
                   ? "font-bold text-sm text-gray-100"
                   : "font-light text-xs text-gray-400"
               }`}
+              key={i}
             >
               {lastColumn(item.value, item.type)}
             </Box>

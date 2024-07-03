@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "./styles.css";
+import Image from "next/image";
 
 const images = [
   {
@@ -24,17 +25,17 @@ const images = [
   // Add more images here
 ];
 
-const ProGallery: React.FC = () => {
+const ProGallery = ({ className }: { className?: string }) => {
   const renderItem = (item: any) => {
     return (
       <a href={item.link} target="_blank" rel="noopener noreferrer">
-        <img src={item.original} alt="Gallery item" />
+        <Image src={item.original} alt="Gallery item" />
       </a>
     );
   };
 
   return (
-    <Box className="w-full relative max-w-screen-xl">
+    <Box className={`w-full relative max-w-screen-xl ${className}`}>
       <ImageGallery items={images} renderItem={renderItem} />
     </Box>
   );

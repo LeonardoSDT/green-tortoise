@@ -3,33 +3,18 @@ import { SectionType } from "./types";
 import Image from "next/image";
 
 export const Section = ({
-  title,
-  description = [],
   background,
-  titleClass,
-  descClass,
   className = "",
+  mainClassName,
   children,
 }: SectionType) => {
   return (
-    <Box className={`relative p-10 w-full overflow-hidden`}>
+    <Box className={`relative w-full overflow-hidden ${mainClassName}`}>
       <Box
         className={`max-w-screen-xl m-auto ${
           background ? "text-gray-200" : "text-gray-700"
         } ${className}`}
       >
-        {title && (
-          <h2
-            className={`z-10 text-xl max-w-96 border-b-2 pb-5 ${titleClass} ${
-              background ? "border-gray-200" : "border-gray-800"
-            }`}
-          >
-            {title}
-          </h2>
-        )}
-        {description.map((desc) => (
-          <p className={`z-10 mt-10 max-w-[750px]  ${descClass}`}>{desc}</p>
-        ))}
         {children}
       </Box>
       {background && (

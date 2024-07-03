@@ -15,12 +15,22 @@
             position: relative;
             img {
               width: 100%;
+              height: auto;
               max-height: none !important;
-              object-fit: contain;
+              object-fit: fill;
               /* position: absolute;
               top: 50%;*/
             }
           }
+        }
+      }
+    }
+
+    .image-gallery-thumbnails-wrapper {
+      .image-gallery-thumbnails {
+        .image-gallery-thumbnails-container {
+          display: flex;
+          justify-content: center;
         }
       }
     }

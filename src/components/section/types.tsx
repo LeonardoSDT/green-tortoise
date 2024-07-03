@@ -9,4 +9,5 @@ export interface SectionType {
   descClass?: string;
   className?: string;
   children?: ReactNode;
+  mainClassName?: string;
 }

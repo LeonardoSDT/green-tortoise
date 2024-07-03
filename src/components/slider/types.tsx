@@ -5,3 +5,9 @@ export interface Slide {
   subImages?: string[];
   link?: { label: string; src: string };
 }
+
+export interface SliderProps {
+  showDetail?: boolean;
+  showMiniatures?: boolean;
+  className?: string;
+}
