@@ -52,8 +52,8 @@ export default function Home() {
       </Section>
       <Section background className="p-10 flex flex-wrap gap-x-16 gap-y-10">
         <ListWhitIcons
-          className="flex-1 basis-1/3"
-          clasNameList="gap-y-5 gap-x-24"
+          className="flex-1 basis-1/3 gap-x-3"
+          clasNameList="gap-y-5 gap-x-32"
           title="Unique Amenities to Keep You Comfortable"
           description="At our SF hostel, we want to make your stay as easy as possible. Take advantage of the free amenities meant to relieve the stress of visiting a new city. We have some unique ones here at the Green Tortoise Like our Free Sauna and Weekly dinners so don't forget to take advantage."
         />
