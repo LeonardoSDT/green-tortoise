@@ -1,44 +1,26 @@
-// components/ProGallery.tsx
-"use client";
-import { Box } from "@mui/material";
-import React, { useState } from "react";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
-import "./styles.css";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import { imagesList } from "./data";
 import Image from "next/image";
+import { Box } from "@mui/material";
+import { Title } from "../title";
 
-const images = [
-  {
-    original:
-      "https://static.wixstatic.com/media/a4f49d_3678c3a727a148c4b4cbe3da525032e0~mv2.jpg",
-    thumbnail:
-      "https://static.wixstatic.com/media/a4f49d_3678c3a727a148c4b4cbe3da525032e0~mv2.jpg",
-    link: "www.facebook.com",
-  },
-  {
-    original:
-      "https://static.wixstatic.com/media/a4f49d_7aa19efb73c6413c8a1261b8892ebaca~mv2.jpg",
-    thumbnail:
-      "https://static.wixstatic.com/media/a4f49d_94c8bd11da254986a0f4b804e727de7e~mv2.jpg",
-    link: "www.facebook.com",
-  },
-  // Add more images here
-];
-
-const ProGallery = ({ className }: { className?: string }) => {
-  const renderItem = (item: any) => {
-    return (
-      <a href={item.link} target="_blank" rel="noopener noreferrer">
-        <Image src={item.original} alt="Gallery item" />
-      </a>
-    );
-  };
-
+export const Gallery = () => {
   return (
-    <Box className={`w-full relative max-w-screen-xl ${className}`}>
-      <ImageGallery items={images} renderItem={renderItem} />
-    </Box>
+    <ImageList cols={3} rowHeight={164}>
+      {imagesList.map((item) => (
+        <ImageListItem className="relative" key={item.image}>
+          <img
+            srcSet={`${item.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            src={`${item.image}?w=164&h=164&fit=crop&auto=format`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <Box className="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center opacity-0 hover:bg-gray-800/50 hover:opacity-100 cursor-pointer">
+            <Title className="text-lg text-gray-200">{item.title}</Title>
+          </Box>
+        </ImageListItem>
+      ))}
+    </ImageList>
   );
 };
-
-export default ProGallery;

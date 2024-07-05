@@ -6,7 +6,7 @@ import { menuOptions } from "../data/global-data";
 
 export const Header = () => {
   return (
-    <header className="p-5 w-full">
+    <header className="p-5 w-full bg-white relative z-30">
       <Box className="max-w-screen-xl m-auto">
         <Box className="section-header flex justify-between">
           <Link href="/">

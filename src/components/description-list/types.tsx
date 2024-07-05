@@ -1,10 +1,11 @@
 export interface DescriptionListProps {
-  list: DescriptionListItem[];
+  list?: DescriptionListItem[];
   titleClass?: string;
   descriptionClass?: string;
+  className?: string;
 }
 
 export interface DescriptionListItem {
-  label: string;
+  title: string;
   description: string;
 }

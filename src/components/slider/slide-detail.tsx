@@ -2,8 +2,7 @@ import { Box } from "@mui/material";
 import { Slide } from "./types";
 import Link from "next/link";
 import Image from "next/image";
-import { DateRange } from "./date-picker";
-
+import { DateRange } from "../date-range";
 export const SlideDetail = ({ title, description, subImages, link }: Slide) => {
   return (
     <Box className="absolute right-40 z-20 p-3 h-full w-[440px] bg-gray-300/75">

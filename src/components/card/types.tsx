@@ -3,4 +3,5 @@ export interface CardType {
   description: string;
   image: string;
   link: string;
+  className?: string;
 }

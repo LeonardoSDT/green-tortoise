@@ -1,10 +1,12 @@
-"use client";
-import { Box } from "@mui/material";
-import { usePathname } from "next/navigation";
+import { FAQs } from "@/components/faqs";
+import { Section } from "@/components/section";
 
 const Page = () => {
-  const path = usePathname();
-  return <Box>{path}</Box>;
+  return (
+    <Section>
+      <FAQs />
+    </Section>
+  );
 };
 
 export default Page;

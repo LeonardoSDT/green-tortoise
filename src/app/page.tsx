@@ -2,12 +2,12 @@ import { Section } from "@/components/section";
 import { Slider } from "@/components/slider";
 import { Cards } from "@/components/card/cards-data";
 import { Card } from "@/components/card";
-import ProGallery from "@/components/gallery";
 import { ListWhitIcons } from "@/components/list-whit-icons";
 import { Box, List, ListItem } from "@mui/material";
 import { Title } from "@/components/title";
 import { P } from "@/components/paragraph";
 import { DescriptionList } from "@/components/description-list";
+import { Map } from "@/components/map";
 
 export default function Home() {
   return (
@@ -53,6 +53,7 @@ export default function Home() {
       <Section background className="p-10 flex flex-wrap gap-x-16 gap-y-10">
         <ListWhitIcons
           className="flex-1 basis-1/3"
+          clasNameList="gap-y-5 gap-x-24"
           title="Unique Amenities to Keep You Comfortable"
           description="At our SF hostel, we want to make your stay as easy as possible. Take advantage of the free amenities meant to relieve the stress of visiting a new city. We have some unique ones here at the Green Tortoise Like our Free Sauna and Weekly dinners so don't forget to take advantage."
         />
@@ -99,7 +100,7 @@ export default function Home() {
           </List>
         </Section>
         <Section className="text-white flex gap-10">
-          <Box className="flex-1">
+          <Box className="flex-1 basis-2/5">
             <Slider showMiniatures />
           </Box>
           <Box className="flex flex-col gap-5 flex-1">
@@ -122,19 +123,24 @@ export default function Home() {
           <Title className="text-green-900">
             Explore Our North beach Neighborhood
           </Title>
-          <P>
+          <P className="text-lg">
             {`North Beach is a centrally located area of San Francisco sandwiched
             between Fishermans Wharf and the Financial District. Our Hostel lies
             in one San Francisco's most historic, diverse and unique
             neighborhoods, with many one of a kind landmarks within a short walk`}
           </P>
         </Section>
-        <Section mainClassName="flex-1 basis-1/3 flex-shrink">Map</Section>
-        <Section mainClassName="flex-1 basis-1/3 flex-shrink">
+        <Section mainClassName="flex-1 basis-3/5 flex-shrink">
           <Slider showMiniatures />
         </Section>
+        <Section
+          className="flex-1 w-full min-h-52"
+          mainClassName="flex-1 flex flex-col basis-1/3 flex-shrink"
+        >
+          <Map />
+        </Section>
         <Section mainClassName="flex-1 basis-1/3 flex-shrink">
-          <DescriptionList />
+          <DescriptionList titleClass="text-green-900" />
         </Section>
       </Section>
       <Section background className="flex flex-wrap gap-y-10 p-10">

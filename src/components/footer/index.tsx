@@ -2,19 +2,9 @@ import { Box } from "@mui/material";
 import { Menu } from "../header/menu";
 import { menuOptions } from "../data/global-data";
 import Image from "next/image";
-import { info } from "../data/footer-data";
-import Link from "next/link";
+import { ContactCard } from "../contact-card";
 
 export const Footer = () => {
-  const lastColumn = (value: string, type: string) => {
-    switch (type) {
-      case "mail":
-        return <Link href={`mailto:${value}`}>{value}</Link>;
-
-      default:
-        return <p>{value}</p>;
-    }
-  };
   return (
     <footer className="bg-black">
       <Box className="max-w-screen-xl m-auto flex justify-between py-7 px-20">
@@ -30,20 +20,7 @@ export const Footer = () => {
             height={231}
           />
         </Box>
-        <Box>
-          {info.map((item, i) => (
-            <Box
-              className={`leading-7 ${
-                item.bold
-                  ? "font-bold text-sm text-gray-100"
-                  : "font-light text-xs text-gray-400"
-              }`}
-              key={i}
-            >
-              {lastColumn(item.value, item.type)}
-            </Box>
-          ))}
-        </Box>
+        <ContactCard className="text-gray-100" />
       </Box>
     </footer>
   );
