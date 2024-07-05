@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Green Tortoise - Hostel - San Francisco</title>
+      </head>
       <body className={`min-h-dvh`}>
         <Header />
         {children}
