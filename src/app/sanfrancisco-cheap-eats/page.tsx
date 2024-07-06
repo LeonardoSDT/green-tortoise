@@ -6,14 +6,14 @@ import { Map } from "@/components/map";
 
 const Page = () => {
   return (
-    <Section className="flex flex-col gap-10">
-      <Title className="max-w-fit text-4xl text-green-700 font-semibold underline underline-offset-8">
+    <Section className="flex flex-col gap-10 px-10 max-sm:px-4">
+      <Title className="max-w-fit text-4xl text-green-700 font-semibold underline underline-offset-8 max-sm:no-underline">
         Our Favorite San Francisco Cheap Eats
       </Title>
-      <Section className="flex gap-10 h-[800px] pb-10">
+      <Section className="flex gap-10 h-[800px] pb-10 max-sm:flex-wrap max-sm:h-auto max-lg:gap-2">
         <Section
-          className="flex-1 w-full min-h-5"
-          mainClassName="flex-1 flex flex-col basis-3/5 flex-shrink"
+          className="flex-1 w-full min-h-64"
+          mainClassName="flex-1 flex flex-col basis-3/5 flex-shrink max-sm:basis-full"
         >
           <Map />
         </Section>

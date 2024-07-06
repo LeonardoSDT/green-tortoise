@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Page = () => {
   return (
-    <Section className="flex pb-10 px-10 gap-16">
+    <Section className="flex pb-10 px-10 gap-16  max-sm:flex-wrap  max-sm:px-4">
       <Section className="flex flex-col gap-5" mainClassName="flex-1 basis-1/3">
         <Title className="text-5xl font-semibold max-w-fit text-green-800">
           Bring the Whole Crew

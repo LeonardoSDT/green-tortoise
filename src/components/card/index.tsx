@@ -27,9 +27,9 @@ export const Card = ({
 
   return (
     <Box
-      className={`flex gap-5 text-left rounded-xl overflow-hidden flex-1 p-2 ${className}`}
+      className={`flex gap-5 text-left rounded-xl overflow-hidden flex-1 p-2 min-w-80 max-sm:gap-4 ${className}`}
     >
-      <Box className="rounded-xl overflow-hidden w-52 h-64 border-4 border-green-800">
+      <Box className="rounded-xl overflow-hidden w-52 h-64 border-4 border-green-800 max-sm:w-40 max-sm:h-52">
         <Link href={link} className="block h-full">
           <Image
             className="w-full h-full object-fill aspect-auto"
@@ -40,9 +40,9 @@ export const Card = ({
           />
         </Link>
       </Box>
-      <Box className="flex-1 flex flex-col items-end justify-between px-4 rounded-b-sm">
-        <Box className="flex flex-col gap-5 pt-5">
-          <Title className="text-2xl font-semibold text-green-700">
+      <Box className="flex-1 flex flex-col items-end justify-between px-4 rounded-b-sm max-sm:p-0 basis-1/2">
+        <Box className="flex flex-col gap-5 pt-5 max-sm:pt-0 max-sm:gap-1">
+          <Title className="text-2xl font-semibold text-green-700 max-sm:text-lg">
             {title}
           </Title>
           <P className="text-sm text-gray-600">{description}</P>

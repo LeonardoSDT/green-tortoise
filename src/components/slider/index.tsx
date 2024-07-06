@@ -65,13 +65,13 @@ export const Slider = ({
     >
       <Box className="h-[415px] w-full overflow-hidden relative">
         <Button
-          className={`${buttonClasses.join(" ")} left-0`}
+          className={`${buttonClasses.join(" ")} left-0 z-40`}
           onClick={prevStep}
         >
           <ArrowBackIos className="text-3xl" />
         </Button>
         <Button
-          className={`${buttonClasses.join(" ")} right-0`}
+          className={`${buttonClasses.join(" ")} right-0 z-40`}
           onClick={nextStep}
         >
           <ArrowForwardIos className="text-3xl" />

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { DateRange } from "../date-range";
 export const SlideDetail = ({ title, description, subImages, link }: Slide) => {
   return (
-    <Box className="absolute right-40 z-20 p-3 h-full w-[440px] bg-gray-300/75">
+    <Box className="absolute right-40 z-20 p-3 h-full w-[440px] bg-gray-300/75 max-sm:right-0 max-sm:w-full">
       <h2 className="text-3xl max-w-96">{title}</h2>
       <DateRange />
       {description && <p className="mt-3">{description}</p>}

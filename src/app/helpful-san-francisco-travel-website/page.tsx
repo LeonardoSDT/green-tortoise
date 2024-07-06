@@ -1,7 +1,4 @@
-"use client";
 import { Section } from "@/components/section";
-import { Box } from "@mui/material";
-import { usePathname } from "next/navigation";
 import { list } from "./data";
 import { AppCard } from "@/components/app-card";
 import { Title } from "@/components/title";

@@ -13,18 +13,18 @@ export default function Home() {
   return (
     <main>
       <Slider showDetail />
-      <Section className="flex justify-center gap-20 p-10">
+      <Section className="flex justify-center flex-wrap gap-20 p-10 max-sm:px-2 max-sm:gap-10">
         {Cards.map((card, i) => (
           <Card key={i} {...card} />
         ))}
       </Section>
-      <Section background className="flex flex-col gap-10 p-10">
+      <Section background className="flex flex-col gap-10 p-10 max-sm:px-4">
         <Title>
           Social Events every Night, and A Grand Ballroom for some Downtime!
         </Title>
         <Slider showMiniatures />
       </Section>
-      <Section className="flex flex-col items-center gap-8 text-center p-10">
+      <Section className="flex flex-col items-center gap-8 text-center p-10 max-sm:px-4">
         <Title className="text-green-900">
           A Social San Francisco Hostel Filled with surprising Amenities and
           Activities!
@@ -50,9 +50,12 @@ export default function Home() {
           happy at this San Fran Hostel.
         </P>
       </Section>
-      <Section background className="p-10 flex flex-wrap gap-x-16 gap-y-10">
+      <Section
+        background
+        className="p-10 flex flex-wrap gap-x-16 gap-y-10 max-sm:px-4"
+      >
         <ListWhitIcons
-          className="flex-1 basis-1/3 gap-x-3"
+          className="flex-1 basis-1/3 gap-x-3 max-sm:basis-full"
           clasNameList="gap-y-5 gap-x-32"
           title="Unique Amenities to Keep You Comfortable"
           description="At our SF hostel, we want to make your stay as easy as possible. Take advantage of the free amenities meant to relieve the stress of visiting a new city. We have some unique ones here at the Green Tortoise Like our Free Sauna and Weekly dinners so don't forget to take advantage."
@@ -99,11 +102,11 @@ export default function Home() {
             <ListItem>Baker Beach</ListItem>
           </List>
         </Section>
-        <Section className="text-white flex gap-10">
-          <Box className="flex-1 basis-2/5">
+        <Section className="text-white flex gap-10 max-sm:flex flex-wrap">
+          <Box className="flex-1 basis-2/5 max-sm:basis-full">
             <Slider showMiniatures />
           </Box>
-          <Box className="flex flex-col gap-5 flex-1">
+          <Box className="flex flex-col gap-5 flex-1 max-sm:basis-full">
             <Title>Digital Nomads, We Got You Covered!</Title>
             <P className="max-w-[450px]">
               We have just finished renovating our New Digital Nomad Work Space
@@ -115,7 +118,7 @@ export default function Home() {
           </Box>
         </Section>
       </Section>
-      <Section className="p-10 flex flex-wrap gap-x-16 gap-y-10">
+      <Section className="p-10 flex flex-wrap gap-x-16 gap-y-10 max-sm:px-4">
         <Section
           className="flex flex-col gap-5"
           mainClassName="flex-1 basis-1/3 flex-shrink"
@@ -135,7 +138,7 @@ export default function Home() {
         </Section>
         <Section
           className="flex-1 w-full min-h-52"
-          mainClassName="flex-1 flex flex-col basis-1/3 flex-shrink"
+          mainClassName="flex-1 flex flex-col basis-1/3 flex-shrink max-sm:basis-full"
         >
           <Map />
         </Section>
@@ -143,10 +146,10 @@ export default function Home() {
           <DescriptionList titleClass="text-green-900" />
         </Section>
       </Section>
-      <Section background className="flex flex-wrap gap-y-10 p-10">
+      <Section background className="flex flex-wrap gap-y-10 p-10 max-sm:px-4">
         <Section
           className="flex flex-col gap-10"
-          mainClassName="flex-1 basis-1/3 flex-shrink"
+          mainClassName="flex-1 basis-1/3 flex-shrink max-sm:basis-full"
         >
           <Title className="text-gray-200">{`Our Hostel's Origin:`}</Title>
           <Title className="text-gray-200">

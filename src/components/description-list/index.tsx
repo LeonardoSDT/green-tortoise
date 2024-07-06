@@ -14,7 +14,7 @@ export const DescriptionList = ({
         {list.map((item, i) => (
           <li
             key={i}
-            className="flex flex-col gap-2 flex-1 basis-1/3 relative pl-8"
+            className="flex flex-col gap-2 flex-1 basis-1/3 relative pl-8 max-sm:basis-full"
           >
             <span className={`absolute left-0 text-3xl ${titleClass}`}>
               {i + 1}.

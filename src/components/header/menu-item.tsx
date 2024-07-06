@@ -21,6 +21,8 @@ export const MenuItem = ({ label, to, subOptions, footer }: MenuOption) => {
     footer ? "bg-black" : "bg-white",
     footer ? "text-gray-600" : "text-black",
     "text-xs",
+    "text-nowrap",
+    "max-sm:text-wrap"
   ];
 
   const subMenuOptionClasses = [
@@ -29,9 +31,9 @@ export const MenuItem = ({ label, to, subOptions, footer }: MenuOption) => {
     footer ? "bottom-0" : "top-full",
     footer ? "left-full" : "left-0",
     "z-10",
-    "text-nowrap",
     footer ? "bg-black" : "bg-white",
     "shadow-xl",
+
   ];
 
   return (

@@ -6,8 +6,8 @@ import { menuOptions } from "../data/global-data";
 
 export const Header = () => {
   return (
-    <header className="p-5 w-full bg-white relative z-30">
-      <Box className="max-w-screen-xl m-auto">
+    <header className="p-3 w-full bg-white relative z-30">
+      <Box className="max-w-screen-xl m-auto max-[600px]:flex items-center justify-between">
         <Box className="section-header flex justify-between">
           <Link href="/">
             <Image
@@ -18,7 +18,7 @@ export const Header = () => {
               height={80}
             />
           </Link>
-          <Box className="social flex">
+          <Box className="social flex max-[600px]:hidden">
             <Link
               className="mr-2"
               href="https://www.facebook.com/sanfranciscohostel/"
@@ -30,11 +30,6 @@ export const Header = () => {
               href="https://www.instagram.com/greentortoisesf/?hl=en"
             >
               <Image src="/insta.png" alt="instagram" width={30} height={30} />
-            </Link>
-            <span>(1-800-867-8647)</span>
-            <span className="mx-6">-</span>
-            <Link href="mailto:hostel@greentortoisesf.com">
-              hostel@greentortoisesf.com
             </Link>
           </Box>
         </Box>

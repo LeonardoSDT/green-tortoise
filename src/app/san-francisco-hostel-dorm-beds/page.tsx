@@ -9,11 +9,11 @@ import { DateRange } from "@/components/date-range";
 
 const Page = () => {
   return (
-    <Section className="max-w-screen-lg flex flex-wrap gap-10 pb-10">
+    <Section className="max-w-screen-lg flex flex-wrap gap-10 pb-10 max-sm:px-4">
       <Title className="text-4xl underline text-green-800">
         Select Your Room
       </Title>
-      <Section className="flex justify-center gap-20">
+      <Section className="flex justify-center gap-20 max-sm:flex-wrap max-sm:gap-10">
         {cards.map((card, i) => (
           <Card key={i} {...card} />
         ))}

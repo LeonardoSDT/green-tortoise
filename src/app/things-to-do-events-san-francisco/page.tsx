@@ -10,11 +10,11 @@ const Page = () => {
   return (
     <Section
       background
-      className="flex flex-wrap justify-between gap-10"
+      className="flex flex-wrap justify-between gap-10 max-sm:px-4"
       mainClassName="py-10"
     >
-      <Section className="flex flex-wrap justify-between">
-        <Title className="text-5xl max-w-[400px] merienda flex-1 basis-1/3 text-gray-200 ">
+      <Section className="flex flex-wrap justify-between max-sm:gap-5">
+        <Title className="text-5xl max-w-[400px] merienda flex-1 basis-1/3 text-gray-200 max-sm:basis-full">
           Social San Francisco Events Every Night!
         </Title>
         <P className="flex-1 basis-1/3 text-sm leading-6 text-gray-200">
@@ -26,10 +26,10 @@ const Page = () => {
           Francisco!
         </P>
       </Section>
-      <Section className="flex gap-10">
+      <Section className="flex gap-10 max-sm:flex-wrap">
         <Section
           className="flex flex-wrap gap-5"
-          mainClassName="flex-1 basis-1/3 flex-shrink-1"
+          mainClassName="flex-1 basis-1/3 flex-shrink-1 max-sm:basis-full"
         >
           <ButtonLink
             label="Register here"
@@ -46,7 +46,7 @@ const Page = () => {
             />
           }
         </Section>
-        <Section mainClassName="flex-1 basis-2/3 flex-shrink-1">
+        <Section mainClassName="flex-1 basis-2/3 flex-shrink-1 max-sm:basis-full">
           <Slider showMiniatures />
         </Section>
       </Section>

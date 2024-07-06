@@ -7,13 +7,13 @@ import { ContactCard } from "../contact-card";
 export const Footer = () => {
   return (
     <footer className="bg-black">
-      <Box className="max-w-screen-xl m-auto flex justify-between py-7 px-20">
-        <Box className="">
+      <Box className="max-w-screen-xl m-auto flex justify-between py-7 px-20 max-md:flex-wrap max-sm:px-4 max-sm:flex-col-reverse max-sm:gap-10">
+        <Box className="max-lg:hidden">
           <Menu options={menuOptions} footer />
         </Box>
-        <Box className="flex">
+        <Box className="flex max-md:flex-1">
           <Image
-            className="object-contain w-auto h-auto"
+            className="object-contain w-auto h-auto max-sm:w-full"
             src="/footer-logo.png"
             alt="footer-logo"
             width={209}

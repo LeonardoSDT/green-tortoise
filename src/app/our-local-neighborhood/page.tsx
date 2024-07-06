@@ -6,7 +6,10 @@ import { Title } from "@/components/title";
 
 const Page = () => {
   return (
-    <Section background className="flex gap-10 px-20 py-10">
+    <Section
+      background
+      className="flex gap-10 px-20 py-10 max-sm:flex-wrap max-sm:px-4"
+    >
       <Section className="flex flex-col gap-5 flex-1">
         <Title className="text-gray-200 max-w-fit">
           Our North Beach Neighborhood

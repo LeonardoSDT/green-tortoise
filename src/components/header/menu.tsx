@@ -1,10 +1,13 @@
 import { MenuOptions } from "./types";
 import { MenuItem } from "./menu-item";
+import TemporaryDrawer from "./mobile-drawer";
 
 export const Menu = ({ options, footer }: MenuOptions) => {
+  const footerClases = ["block"];
+  const menuClasses = ["flex", "flex-wrap", "max-[600px]:hidden"];
   return (
-    <nav className="mx-4">
-      <ul className={`menu ${footer ? "block" : "flex"}`}>
+    <nav>
+      <ul className={`mx-4 ${footer ? footerClases : menuClasses.join(" ")}`}>
         {options.map(({ label, to, subOptions }, key) => (
           <MenuItem
             key={key}
@@ -15,6 +18,7 @@ export const Menu = ({ options, footer }: MenuOptions) => {
           />
         ))}
       </ul>
+      <TemporaryDrawer options={options} />
     </nav>
   );
 };

@@ -30,7 +30,8 @@ export const DateRange = () => {
   const datePickerStyles = {
     "&.MuiFormControl-root": {
       minWidth: 0,
-      width: "130px",
+      width: "140px",
+      flex: "1 1 30%",
     },
     ".MuiInputBase-root": { backgroundColor: "white" },
     ".MuiInputBase-input": {
@@ -47,9 +48,10 @@ export const DateRange = () => {
           overflow: "hidden",
           marginTop: "10px",
           alignItems: "center",
-          "& + *": {
-            marginTop: "20px",
-          },
+          display: "flex",
+          gap: "10px",
+          flexDirection: "row !important",
+          "&>* + *": { margin: "0 !important" },
         }}
       >
         <DatePicker

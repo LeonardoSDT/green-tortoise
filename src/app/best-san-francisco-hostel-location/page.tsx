@@ -8,7 +8,7 @@ import { ContactCard } from "@/components/contact-card";
 
 const Page = () => {
   return (
-    <Section className="flex flex-wrap px-8 gap-10 pb-10">
+    <Section className="flex flex-wrap px-8 gap-10 pb-10  max-sm:px-4">
       <Section
         className="flex flex-col gap-10"
         mainClassName="flex-1 basis-1/5"
