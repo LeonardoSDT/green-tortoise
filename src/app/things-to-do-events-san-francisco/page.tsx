@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <Section
       background
-      className="flex flex-wrap justify-between gap-10 max-sm:px-4"
+      className="flex flex-wrap justify-between gap-10 max-sm:px-4 main-continer"
       mainClassName="py-10"
     >
       <Section className="flex flex-wrap justify-between max-sm:gap-5">

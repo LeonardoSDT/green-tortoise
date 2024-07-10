@@ -8,7 +8,7 @@ import { P } from "@/components/paragraph";
 
 const Page = () => {
   return (
-    <Section className="max-w-screen-lg flex flex-wrap gap-10 pb-10 max-sm:px-4">
+    <Section className="max-w-screen-lg flex flex-wrap gap-10 pb-10 max-sm:px-4 main-continer">
       <Title className="text-4xl underline text-green-800 max-w-fit">
         Choose Your Private Room
       </Title>

@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <Section
       background
-      className="flex gap-10 px-20 py-10 max-sm:flex-wrap max-sm:px-4"
+      className="flex gap-10 px-20 py-10 max-sm:flex-wrap max-sm:px-4 main-continer"
     >
       <Section className="flex flex-col gap-5 flex-1">
         <Title className="text-gray-200 max-w-fit">

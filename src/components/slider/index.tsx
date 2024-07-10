@@ -84,7 +84,7 @@ export const Slider = ({
             }`}
           >
             <Image
-              className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 object-cover h-full"
+              className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 object-cover h-full aspect-video"
               src={slide.image}
               alt="slider-image"
               height={415}

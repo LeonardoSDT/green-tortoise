@@ -11,7 +11,7 @@ import { Map } from "@/components/map";
 
 export default function Home() {
   return (
-    <main>
+    <main className="main-continer">
       <Slider showDetail />
       <Section className="flex justify-center flex-wrap gap-20 p-10 max-sm:px-2 max-sm:gap-10">
         {Cards.map((card, i) => (

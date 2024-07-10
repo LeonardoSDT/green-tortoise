@@ -7,7 +7,7 @@ import { Title } from "@/components/title";
 
 const Page = () => {
   return (
-    <Section className="flex flex-wrap gap-10 px-12 pb-12 max-sm:px-4">
+    <Section className="flex flex-wrap gap-10 px-12 pb-12 max-sm:px-4 main-continer">
       <Section mainClassName="flex-1 basis-1/5">
         <Title className="text-4xl font-semibold text-green-700">
           San Francisco

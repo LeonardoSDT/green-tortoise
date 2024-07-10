@@ -6,7 +6,7 @@ import { Map } from "@/components/map";
 
 const Page = () => {
   return (
-    <Section className="flex flex-col gap-10 max-sm:px-4">
+    <Section className="flex flex-col gap-10 max-sm:px-4 main-continer">
       <Title className="max-w-fit text-4xl text-green-700 font-semibold underline underline-offset-8 max-sm:no-underline">
         Our Favorite Galleries and Museums
       </Title>

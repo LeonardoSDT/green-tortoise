@@ -10,7 +10,7 @@ import { Slider } from "@/components/slider";
 const Page = () => {
   const path = usePathname();
   return (
-    <main>
+    <main className="main-continer">
       <Banner {...banner} />
       <Section className="py-10 px-20">
         <ListWhitIcons

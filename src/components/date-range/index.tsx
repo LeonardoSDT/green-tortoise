@@ -3,20 +3,25 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
+import { useRouter } from "next/navigation";
+import { ButtonLink } from "../button-link";
 
 export const DateRange = () => {
+  const router = useRouter();
   const [checkIn, setCheckIn] = React.useState<Dayjs | null>(dayjs(new Date()));
   const [checkOut, setCheckOut] = React.useState<Dayjs | null>(
-    dayjs(new Date())
+    dayjs(new Date()).add(1, "day")
   );
+  const [url, setUrl] = useState("#");
+
   const today = dayjs(new Date());
 
   const handleCheckIn = (newDate: Dayjs | null) => {
     setCheckIn(newDate);
     if (checkOut && newDate && newDate >= checkOut) {
-      setCheckOut(newDate); // Reset check-out date if it is before the new check-in date
+      setCheckOut(newDate.add(1, "days")); // Reset check-out date if it is before the new check-in date
     }
   };
 
@@ -39,6 +44,14 @@ export const DateRange = () => {
       fontSize: "12px",
     },
   };
+
+  useEffect(() => {
+    const checkInDate = checkIn?.format("YYYY-MM-DD");
+    const checkOutDate = checkOut?.format("YYYY-MM-DD");
+    setUrl(
+      `https://hotels.cloudbeds.com/en/reservation/U6b4Vw?ga_sess_id=undefined&checkin=${checkInDate}&checkout=${checkOutDate}&currency=usd`
+    );
+  }, [checkIn, checkOut]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -68,12 +81,12 @@ export const DateRange = () => {
           minDate={checkIn ? checkIn : today}
           sx={datePickerStyles}
         />
-        <Button
-          className="bg-gray-500 text-gray-100 border-2 border-white border-solid text-sm w-32"
-          sx={{ "&.MuiButtonBase-root": { padding: "5px" } }}
-        >
-          Go
-        </Button>
+        <ButtonLink
+          link={url}
+          label="GO"
+          className="bg-gray-500 text-gray-100 border-2 border-white border-solid text-sm w-32 p-1 rounded-md text-center"
+          target="_blank"
+        />
       </DemoContainer>
     </LocalizationProvider>
   );

@@ -3,7 +3,7 @@ import { Section } from "@/components/section";
 
 const Page = () => {
   return (
-    <Section>
+    <Section className="main-continer">
       <FAQs />
     </Section>
   );

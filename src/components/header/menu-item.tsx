@@ -3,6 +3,8 @@ import Link from "next/link";
 import { MenuOption } from "./types";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { List, ListItem } from "@mui/material";
+import { Li } from "./styles";
 
 export const MenuItem = ({ label, to, subOptions, footer }: MenuOption) => {
   const [showSubMenu, setShowSubMenu] = useState(false);
@@ -22,7 +24,7 @@ export const MenuItem = ({ label, to, subOptions, footer }: MenuOption) => {
     footer ? "text-gray-600" : "text-black",
     "text-xs",
     "text-nowrap",
-    "max-sm:text-wrap"
+    "max-sm:text-wrap",
   ];
 
   const subMenuOptionClasses = [
@@ -33,32 +35,24 @@ export const MenuItem = ({ label, to, subOptions, footer }: MenuOption) => {
     "z-10",
     footer ? "bg-black" : "bg-white",
     "shadow-xl",
-
   ];
 
   return (
-    <li
-      onMouseEnter={() => subOptions && setShowSubMenu(true)}
-      onMouseLeave={() => subOptions && setShowSubMenu(false)}
-      className={`${menuOptionClases.join(" ")}`}
-    >
+    <Li className={`${menuOptionClases.join(" ")}`}>
       <Link href={to} className={`hover:text-green-800 ${isActive(path, to)}`}>
         {label.toUpperCase()}
       </Link>
-      {subOptions && showSubMenu && (
-        <ul className={subMenuOptionClasses.join(" ")}>
+      {subOptions && (
+        <List className={subMenuOptionClasses.join(" ")}>
           {subOptions.map(({ label, to }, i) => (
-            <li key={i}>
-              <Link
-                href={to}
-                className={`hover:text-green-800 ${isActive(path, to)}`}
-              >
+            <Li key={i}>
+              <Link href={to} className={`${isActive(path, to)}`}>
                 {label}
               </Link>
-            </li>
+            </Li>
           ))}
-        </ul>
+        </List>
       )}
-    </li>
+    </Li>
   );
 };

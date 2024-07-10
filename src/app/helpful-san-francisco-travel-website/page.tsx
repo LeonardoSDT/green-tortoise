@@ -5,7 +5,7 @@ import { Title } from "@/components/title";
 
 const Page = () => {
   return (
-    <Section>
+    <Section className="main-continer">
       <Title className="ml-8 font-bold text-green-700">
         Useful San Francisco Apps & Websites
       </Title>

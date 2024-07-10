@@ -11,27 +11,13 @@ export const Header = () => {
         <Box className="section-header flex justify-between">
           <Link href="/">
             <Image
-              className="w-auto h-auto"
+              className="w-auto h-auto aspect-auto"
               src="/logo.png"
               alt="logo"
               width={254}
               height={80}
             />
           </Link>
-          <Box className="social flex max-[600px]:hidden">
-            <Link
-              className="mr-2"
-              href="https://www.facebook.com/sanfranciscohostel/"
-            >
-              <Image src="/face.png" alt="facebook" width={30} height={30} />
-            </Link>
-            <Link
-              className="mr-2"
-              href="https://www.instagram.com/greentortoisesf/?hl=en"
-            >
-              <Image src="/insta.png" alt="instagram" width={30} height={30} />
-            </Link>
-          </Box>
         </Box>
         <Menu options={menuOptions} />
       </Box>

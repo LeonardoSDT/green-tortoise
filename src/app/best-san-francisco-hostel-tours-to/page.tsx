@@ -8,7 +8,7 @@ import { ButtonLink } from "@/components/button-link";
 
 const Page = () => {
   return (
-    <Section className="flex flex-wrap gap-10 pb-10 max-">
+    <Section className="flex flex-wrap gap-10 pb-10 main-continer">
       <Title className="max-w-full text-5xl font-semibold flex-1 flex-shrink-1 basis-4/5 max-2xl:px-4">
         Green Tortoise Adventure Travel
       </Title>
