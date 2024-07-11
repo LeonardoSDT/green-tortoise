@@ -33,9 +33,9 @@ export function ChatButton({ path }: ChatButtonProps) {
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <Button className='!fixed bottom-0 left-0 m-9 !p-3 !h-14 !rounded-full !z-50 !text-gray-200 !bg-green-800 !shadow-2xl' variant='secondary'><Icons.wallavi className='w-8 h-8' /></Button>
+          <Button className='!fixed bottom-0 right-0 m-9 !p-3 !h-14 !rounded-full !z-50 !text-gray-200 !bg-green-800 !shadow-2xl' variant='secondary'><Icons.wallavi className='w-8 h-8' /></Button>
         </PopoverTrigger>
-        <PopoverContent side='right' sideOffset={10} className='mb-4 !border-0 !p-0 !w-96'>
+        <PopoverContent side='left' sideOffset={10} className='mb-4 !border-0 !p-0 !w-96'>
           <div className='p-4 bg-green-800 rounded-t-md flex justify-between'>
             <div className='flex items-center gap-4'>
               <Avatar>
@@ -59,7 +59,7 @@ export function ChatButton({ path }: ChatButtonProps) {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button className='!fixed bottom-0 left-0 m-9 !p-3 !h-14 !rounded-full !z-50 !text-gray-200 !bg-green-800 !shadow-2xl' variant='secondary'><Icons.wallavi className='w-8 h-8' /></Button>
+        <Button className='!fixed bottom-0 right-0 m-9 !p-3 !h-14 !rounded-full !z-50 !text-gray-200 !bg-green-800 !shadow-2xl' variant='secondary'><Icons.wallavi className='w-8 h-8' /></Button>
       </DrawerTrigger>
       <DrawerContent className='!border-0'>
         <div className='p-4 bg-green-800 flex justify-between'>

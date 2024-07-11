@@ -30,7 +30,7 @@ export const FloatingButton = () => {
         flexGrow: 1,
         position: "fixed",
         bottom: "20px",
-        right: "20px",
+        left: "20px",
         zIndex: 50,
       }}
     >
@@ -39,7 +39,7 @@ export const FloatingButton = () => {
         sx={{
           position: "absolute",
           bottom: 16,
-          right: 16,
+          left: 16,
           button: {
             backgroundColor: "#15803d",
             "&:hover": { backgroundColor: "#16a34a" },
