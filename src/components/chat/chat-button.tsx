@@ -38,10 +38,7 @@ export function ChatButton({ path }: ChatButtonProps) {
         <PopoverContent side='left' sideOffset={10} className='mb-4 !border-0 !p-0 !w-96'>
           <div className='p-4 bg-green-800 rounded-t-md flex justify-between'>
             <div className='flex items-center gap-4'>
-              <Avatar>
-                <AvatarImage src="/wallavi.jpg" />
-                <AvatarFallback>WA</AvatarFallback>
-              </Avatar>
+              <Icons.wallavi className='w-10 h-10 text-gray-200' />
               <span className='text-gray-200 font-semibold'>Wallavi AI</span>
             </div>
             <div className='hover:bg-green-900 hover:cursor-pointer rounded-md p-2 text-gray-200' onClick={() => setOpen(false)}>
@@ -64,10 +61,7 @@ export function ChatButton({ path }: ChatButtonProps) {
       <DrawerContent className='!border-0'>
         <div className='p-4 bg-green-800 flex justify-between'>
           <div className='flex items-center gap-4'>
-            <Avatar>
-              <AvatarImage src="/wallavi.jpg" />
-              <AvatarFallback>WA</AvatarFallback>
-            </Avatar>
+            <Icons.wallavi className='w-10 h-10 text-gray-200' />
             <span className='text-gray-200 font-semibold'>Wallavi AI</span>
           </div>
           <div className='hover:bg-green-900 hover:cursor-pointer rounded-md p-2 text-gray-200' onClick={() => setOpen(false)}>
