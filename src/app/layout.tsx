@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import '@wallavi/ui/style'
+import { ChatButton } from '@/components/chat/chat-button'
+import { AI } from './actions';
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FloatingButton } from "@/components/floating-button";
@@ -25,6 +28,9 @@ export default function RootLayout({
       <body className={`min-h-dvh`}>
         <Header />
         {children}
+        <AI>
+          <ChatButton />
+        </AI>
         <FloatingButton />
         <Footer />
       </body>
